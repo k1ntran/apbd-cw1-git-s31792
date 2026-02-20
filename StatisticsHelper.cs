@@ -14,6 +14,9 @@ public class StatisticsHelper
         if (values == null || values.Length == 0) return 0;
         return values.Max(); 
     }
-    public int CalculateMin(int[] values) { 
-        return 0; }
+    public int CalculateMin(int[] values) 
+{ 
+    if (values == null || values.Length == 0) return 0;
+    return values.Min(); 
+}
 }
