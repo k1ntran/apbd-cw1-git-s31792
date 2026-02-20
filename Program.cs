@@ -1,11 +1,28 @@
-﻿Console.WriteLine("Welcome to the Statistics App!");
-int[] numbers = { 1, 2, 3, 4, 5 };
+﻿using System;
 
-if (numbers == null || numbers.Length == 0)
+class Program
 {
-    Console.WriteLine("Error: The input array cannot be empty.");
-    return;
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Welcome to the Statistics App!");
+        Console.WriteLine("Enter some numbers separated by commas:");
+        string input = Console.ReadLine();
+        
+        try 
+        {
+            string[] stringValues = input.Split(',');
+            int[] numbers = Array.ConvertAll(stringValues, int.Parse);
+            
+          
+            StatisticsHelper helper = new StatisticsHelper();
+            double average = helper.CalculateAverage(numbers);
+            
+            Console.WriteLine("Numbers successfully recorded.");
+            Console.WriteLine($"The calculated average is: {average}");
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Error: Please only enter valid integers.");
+        }
+    }
 }
-
-int total = StatisticsHelper.CalculateTotal(numbers);
-Console.WriteLine($"The total sum is: {total}");
