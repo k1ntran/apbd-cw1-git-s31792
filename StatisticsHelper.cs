@@ -1,12 +1,15 @@
+using System;
+using System.Linq; 
+
 public class StatisticsHelper
 {
-    public static int CalculateTotal(int[] values)
+    public double CalculateAverage(int[] values)
     {
-        int total = 0;
-        foreach (int val in values)
+        if (values == null || values.Length == 0)
         {
-            total += val;
+            return 0;
         }
-        return total;
+        
+        return values.Average();
     }
 }
