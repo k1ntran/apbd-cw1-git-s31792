@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to the Statistics App!");
+        Console.WriteLine("Welcome to the Statistics App v2.0");
         Console.WriteLine("Enter some numbers separated by commas:");
         string input = Console.ReadLine();
         
