@@ -13,3 +13,6 @@ Question 1:
 Question 2:
 + When you merge, Git creates a new "Merge Commit" to stitch two branches together. Use Merge if you want to keep a record of exactly how your team collaborated
 + When you rebase, Git takes your branch's commits and moves them to the very tip of the main branch. Use Rebase if you want a clean, simple, and easy-to-read list of changes.
+
+Question 3: 
+I created a conflict by modifying the welcome message in Program.cs differently on both main and feature-conflict. I resolved it by manually editing Program.cs to remove the Git conflict markers, choose a combined version of the two messages, and do the merge with a new commit.
